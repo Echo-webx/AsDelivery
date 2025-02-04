@@ -22,3 +22,7 @@ This is an internal web application for delivery, consisting of a frontend on **
 ## Additional information
 
 For more detailed setup and usage instructions, go to the appropriate folder **frontend** or **backend**.
+
+## License
+
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**. See the [LICENSE](./LICENSE) file for more details.
