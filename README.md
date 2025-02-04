@@ -2,7 +2,7 @@
 
 ## Description
 
-This is an internal web application for delivery, consisting of a frontend on **Next.js** and backend on **NestJS**. The project was developed quite a long time ago, and despite the refactoring, there are still many problems in it.
+This is an web application for delivery, consisting of a frontend on **Next.js** and backend on **NestJS**. The project was developed quite a long time ago, and despite the refactoring, there are still many problems in it.
 
 ## Current issues
 
@@ -13,7 +13,7 @@ This is an internal web application for delivery, consisting of a frontend on **
 
 ## Possible improvements
 
-- Carrying out refactoring to eliminate code duplication.
+- Conducting refactoring to eliminate code duplication.
 - Improved architecture and separation of logic.
 - Updating dependencies.
 - Covering key parts with tests.
