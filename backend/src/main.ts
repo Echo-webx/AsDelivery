@@ -37,6 +37,6 @@ async function bootstrap() {
 
 	app.disable('x-powered-by')
 
-	await app.listen(config.getOrThrow<number>('PORT') || 4000)
+	await app.listen(config.get<number>('PORT') || 4000)
 }
 bootstrap()
