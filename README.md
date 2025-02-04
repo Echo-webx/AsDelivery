@@ -13,7 +13,7 @@ This is an web application for delivery, consisting of a frontend on **Next.js**
 
 ## Possible improvements
 
-- Carrying out refactoring to eliminate code duplication.
+- Conducting refactoring to eliminate code duplication.
 - Improved architecture and separation of logic.
 - Updating dependencies.
 - Covering key parts with tests.
