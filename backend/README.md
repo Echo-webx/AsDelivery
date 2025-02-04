@@ -29,33 +29,33 @@
 ## Installation
 
 ```bash
-$ yarn install
+$ bun install
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ yarn run start
+$ bun run start
 
 # watch mode
-$ yarn run start:dev
+$ bun run start:dev
 
 # production mode
-$ yarn run start:prod
+$ bun run start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ yarn run test
+$ bun run test
 
 # e2e tests
-$ yarn run test:e2e
+$ bun run test:e2e
 
 # test coverage
-$ yarn run test:cov
+$ bun run test:cov
 ```
 
 ## Support
