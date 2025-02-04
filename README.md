@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./frontend/public/images/favicon.svg" width="200" alt="Project Logo" />
+</p>
+
 # AsDelivery
 
 ## Description
