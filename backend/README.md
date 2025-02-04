@@ -36,6 +36,8 @@ $ bun run build
 $ bun run prod
 ```
 
+The application will run on **http://localhost:4000**
+
 ## Dependencies
 
 ### Main Dependencies:
