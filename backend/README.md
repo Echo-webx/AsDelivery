@@ -21,13 +21,13 @@ $ bun install
 ## Running the app
 
 ```bash
-# development
+# development mode
 $ bun run start
 
 # watch mode
 $ bun run dev
 
-# build
+# build the application
 $ bun run build
 
 # production mode
