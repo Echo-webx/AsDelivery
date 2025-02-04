@@ -56,5 +56,7 @@ $ bun run start
 - Environment variables are used to manage API endpoints and other configurations.
 - Uses **Next.js App Router** for modern routing and layout management.
 
+## License
 
+This project is licensed under the [GNU Affero General Public License v3.0](../LICENSE)
 
