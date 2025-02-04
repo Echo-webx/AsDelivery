@@ -28,7 +28,6 @@ async function bootstrap() {
 
 	app.use(helmet({ contentSecurityPolicy: !isDev(config) }))
 	app.use(cookieParser())
-	// app.useWebSocketAdapter(new IoAdapter(app))
 
 	app.enableCors({
 		origin: urls,
