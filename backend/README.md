@@ -36,6 +36,22 @@ $ bun run build
 $ bun run prod
 ```
 
+
+## Dependencies
+
+**Main dependencies:**
+- Nest.js
+- Passport
+- Argon2
+- Uuid
+- Helmet
+- React-email
+
+**Development dependencies:**
+- TypeScript
+- ESLint & Prettier
+- Prisma
+
 ## Additional information
 
 - Use environment variables to configure the configuration.
