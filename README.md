@@ -21,7 +21,7 @@ This is an internal web application for delivery, consisting of a frontend on **
 
 ## Additional information
 
-For more detailed setup and usage instructions, go to the appropriate folder **frontend** or **backend**.
+For more detailed setup and usage instructions, go to the appropriate folder [frontend](/frontend) or [backend](/backend).
 
 ## License
 
