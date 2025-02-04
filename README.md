@@ -25,4 +25,4 @@ For more detailed setup and usage instructions, go to the appropriate folder **f
 
 ## License
 
-This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**. See the [LICENSE](./LICENSE) file for more details.
+This project is licensed under the [GNU Affero General Public License v3.0](./LICENSE)
