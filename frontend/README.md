@@ -9,14 +9,14 @@
 
 ## Features
 
-- Server-side rendering (SSR) and static site generation (SSG)
-- Global state management Zustand 
-- API integration with NestJS backend
-- Interactive maps with **@2gis/mapgl**
-- Data fetching and caching with **@tanstack/react-query**
-- Charts and visualizations using **chart.js** and **react-chartjs-2**
-- Theming support with **next-themes**
-- Notifications via **react-hot-toast**
+- **Server-side rendering (SSR)** and **static site generation (SSG)**
+- **Global state management** with Zustand
+- **API integration** with a NestJS backend
+- **Interactive maps** powered by **@2gis/mapgl**
+- **Data fetching and caching** with **@tanstack/react-query**
+- **Charts and visualizations** using **chart.js** and **react-chartjs-2**
+- **Theming support** via **next-themes**
+- **Notifications** powered by **react-hot-toast**
 
 ## Installation
 
@@ -40,6 +40,7 @@ $ bun run start
 ## Dependencies
 
 **Main dependencies:**
+
 - Next.js 15
 - React 19
 - Zustand
@@ -48,6 +49,7 @@ $ bun run start
 - Lucide React
 
 **Development dependencies:**
+
 - TypeScript
 - ESLint & Prettier
 - PostCSS
@@ -55,9 +57,8 @@ $ bun run start
 ## Additional information
 
 - The application fetches data from the **NestJS backend**.
-- Uses **Next.js App Router** for modern routing and layout management.
+- Utilizes **Next.js App Router** for modern routing and layout management.
 
 ## License
 
 This project is licensed under the [GNU Affero General Public License v3.0](../LICENSE)
-
