@@ -8,9 +8,9 @@
 	"private": true,
 	"license": "AGPL-3.0",
 	"scripts": {
-		"dev": "next dev -p 8080 --turbopack",
+		"dev": "next dev -p 3000 --turbopack",
 		"build": "next build",
-		"start": "next start -p 8080",
+		"start": "next start -p 3000",
 		"lint": "next lint"
 	},
 	"dependencies": {

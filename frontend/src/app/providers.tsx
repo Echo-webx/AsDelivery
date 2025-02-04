@@ -1,7 +1,6 @@
 'use client'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { type PropsWithChildren, useState } from 'react'
 
 import { LoaderProvider } from '@/providers/LoaderProvider'
@@ -25,13 +24,7 @@ export function Providers({ children }: PropsWithChildren) {
 	return (
 		<QueryClientProvider client={client}>
 			<ThemeProvider>
-				<LoaderProvider>
-					{children}
-					<ReactQueryDevtools
-						initialIsOpen={false}
-						buttonPosition='top-left'
-					/>
-				</LoaderProvider>
+				<LoaderProvider>{children}</LoaderProvider>
 			</ThemeProvider>
 		</QueryClientProvider>
 	)
