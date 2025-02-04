@@ -9,8 +9,6 @@
 
 - Server-side rendering (SSR) and static site generation (SSG)
 - Global state management Zustand 
-- Component-based architecture
-- Modern styling with Tailwind CSS
 - API integration with NestJS backend
 - Interactive maps with **@2gis/mapgl**
 - Data fetching and caching with **@tanstack/react-query**
@@ -58,7 +56,5 @@ $ bun run start
 - Environment variables are used to manage API endpoints and other configurations.
 - Uses **Next.js App Router** for modern routing and layout management.
 
-## License
 
-This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**. See the [LICENSE](../LICENSE) file for more details.
 
