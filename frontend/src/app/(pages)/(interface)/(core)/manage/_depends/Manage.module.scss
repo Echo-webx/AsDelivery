@@ -1,0 +1,10 @@
+.not_success {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--btn-red-color);
+	font-size: 20px;
+	padding: 10px 12px;
+	height: 100%;
+	font-weight: bold;
+}

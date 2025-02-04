@@ -1,0 +1,35 @@
+.main {
+	user-select: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 50px;
+	height: 100svh;
+
+	> .box {
+		position: relative;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		padding: 10px;
+		width: 100%;
+		height: 140px;
+		border: 2px solid var(--box-border);
+		background-color: var(--box-background);
+		border-radius: 8px;
+		text-shadow:
+			-0.6px 0 var(--alt-shadow),
+			0 0.6px var(--alt-shadow),
+			0.6px 0 var(--alt-shadow),
+			0 -0.6px var(--alt-shadow);
+
+		> h1 {
+			z-index: 1;
+			font-size: 24px;
+			line-height: 36px;
+			font-weight: bold;
+		}
+	}
+}

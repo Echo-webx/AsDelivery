@@ -1,0 +1,30 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+
+	> button {
+		padding: 3px;
+		min-width: 34px;
+		border: 2px solid var(--btn-border);
+		border-radius: 50%;
+		background-color: var(--btn-color);
+		cursor: pointer;
+
+		&:disabled {
+			background-color: var(--btn-disabled);
+			cursor: not-allowed;
+		}
+
+		&.active {
+			background-color: var(--alt-btn-active);
+			color: white;
+			font-weight: 500;
+		}
+	}
+
+	> span {
+		padding: 3px;
+	}
+}

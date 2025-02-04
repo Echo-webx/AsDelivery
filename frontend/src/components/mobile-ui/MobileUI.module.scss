@@ -1,0 +1,32 @@
+.main {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 55px 0px;
+	height: calc(100svh - 55px - 55px);
+	width: 100svw;
+}
+
+.not_found {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	color: var(--placeholder);
+	font-size: 20px;
+	padding: 50px;
+	height: 100%;
+	font-weight: bold;
+}
+
+.not_success {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	color: var(--btn-red-color);
+	font-size: 35px;
+	padding: 50px;
+	height: 100%;
+	font-weight: bold;
+}

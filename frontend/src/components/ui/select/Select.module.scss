@@ -1,0 +1,252 @@
+.selectContainer {
+	user-select: none;
+	position: relative;
+
+	> .label {
+		user-select: none;
+		font-size: 14px;
+		font-weight: 500;
+		margin-left: 4px;
+	}
+	> .label.error {
+		color: var(--box-red-color);
+	}
+	> .select {
+		overflow: hidden;
+		display: flex;
+		gap: 7px;
+		width: 100%;
+		font-size: 16px;
+		background-color: var(--box-background);
+		border: 2px solid var(--box-border);
+		border-radius: 7px;
+		cursor: pointer;
+
+		> p {
+			overflow: hidden;
+			text-wrap: nowrap;
+			text-overflow: ellipsis;
+			font-weight: 500;
+
+			&.null {
+				color: var(--placeholder);
+			}
+			&.error {
+				color: var(--box-red-active);
+			}
+		}
+
+		> .list {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 7px;
+			gap: 7px;
+			overflow-y: auto;
+			max-height: 100px;
+
+			> .add {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				max-width: 100%;
+				border-radius: 4px;
+				background-color: var(--box-green-border);
+				transition: 0.1s;
+
+				&:active {
+					scale: 0.97;
+				}
+
+				p {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					text-wrap: nowrap;
+					padding: 0px 6px;
+					padding-left: 0px;
+					color: white;
+					text-shadow:
+						-0.6px 0 black,
+						0 0.6px black,
+						0.6px 0 black,
+						0 -0.6px black;
+				}
+				svg {
+					color: white;
+					padding: 3px;
+					align-items: center;
+					justify-content: center;
+					stroke-width: 3;
+					border-radius: 4px;
+				}
+			}
+
+			> .mSelected {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 4px;
+				background-color: var(--btn-hover);
+				transition: 0.1s;
+
+				p {
+					padding: 0px 4px;
+				}
+				svg {
+					padding: 5.5px;
+					align-items: center;
+					justify-content: center;
+					stroke-width: 3;
+					border-radius: 4px;
+					filter: drop-shadow(0px 0px 5px var(--alt-shadow));
+					transition: 0.1s;
+
+					&:active {
+						color: white;
+						background-color: var(--btn-red-hover);
+					}
+				}
+			}
+		}
+	}
+	> .select.activates {
+		padding: 7px 9px;
+		transition: 0.1s;
+
+		&:active {
+			background-color: var(--box-hover);
+		}
+	}
+	> .select.error {
+		background-color: var(--box-red-input);
+		border-color: var(--box-red-border);
+		color: var(--box-red-placeholder);
+
+		> .add {
+			background-color: var(--box-red-color);
+		}
+	}
+	> .select.labeling {
+		margin-top: 2px;
+	}
+
+	> .optionList {
+		overflow: hidden;
+		position: absolute;
+		width: 100%;
+		overflow-y: auto;
+		background-color: var(--box-background);
+		border: 2px solid var(--box-border);
+		border-radius: 7px;
+		margin-top: 5px;
+		z-index: 100;
+		display: none;
+
+		> .filter {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			border-bottom: 2px solid var(--box-border);
+			background-color: var(--box-hover);
+			transition: 0.1s;
+
+			> svg {
+				padding: 5px;
+				min-width: 35px;
+				min-height: 35px;
+			}
+			> input {
+				width: 100%;
+				padding: 5px 7px;
+				padding-left: 2px;
+				background-color: rgba(0, 0, 0, 0);
+			}
+
+			> .pagination {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 5px;
+				margin-right: 5px;
+
+				> button {
+					border: 1px solid var(--btn-border);
+					border-radius: 50%;
+					background-color: var(--btn-color);
+					cursor: pointer;
+
+					> .spinner {
+						animation: spin 1s linear infinite;
+					}
+
+					&:disabled {
+						background-color: var(--btn-disabled);
+						cursor: not-allowed;
+					}
+
+					&.active {
+						background-color: var(--alt-btn-active);
+						color: white;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+		> .scroll {
+			display: flex;
+			flex-direction: column;
+			max-height: calc(7 * 35px);
+			overflow-y: auto;
+			scroll-behavior: smooth;
+
+			> .noOptions {
+				position: relative;
+				padding: 10px;
+				min-height: 50px;
+				text-align: center;
+				color: #888;
+				font-weight: bold;
+			}
+		}
+	}
+	.optionList.active {
+		display: block;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-7px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.fadeIn {
+	animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-7px);
+	}
+}
+.fadeOut {
+	animation: fadeOut 0.2s ease forwards;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

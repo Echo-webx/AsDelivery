@@ -1,0 +1,228 @@
+.not_success {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--btn-red-color);
+	font-size: 16px;
+	padding: 10px 12px;
+	height: 100%;
+	font-weight: bold;
+}
+
+.main {
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	> .form {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding: 5px 10px;
+		height: 100%;
+
+		> .btn_add {
+			user-select: none;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			padding: 7px 9px;
+			font-weight: 500;
+			text-shadow:
+				-0.6px 0 var(--alt-shadow),
+				0 0.6px var(--alt-shadow),
+				0.6px 0 var(--alt-shadow),
+				0 -0.6px var(--alt-shadow);
+			border: 2px solid var(--btn-border);
+			border-radius: 10px;
+			background-color: var(--box-background);
+			box-shadow: 0px 0px 5px 1px var(--box-shadow);
+			transition: 0.1s;
+
+			> p {
+				overflow: hidden;
+				text-wrap: nowrap;
+				text-overflow: ellipsis;
+				font-weight: 500;
+				font-size: 15px;
+			}
+
+			&:not(:disabled):active {
+				background-color: var(--box-hover);
+			}
+		}
+
+		> .box_regions {
+			overflow: hidden;
+			user-select: none;
+			border-radius: 10px;
+			background-color: var(--box-background);
+			box-shadow: 0px 0px 5px 1px var(--box-shadow);
+			height: calc(100% - 52px - 54px);
+
+			> .map_window {
+				position: relative;
+				overflow: hidden;
+				height: calc(100% - 33px);
+				width: 100%;
+			}
+
+			> .top {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				overflow: hidden;
+				font-size: 14px;
+				min-height: 33px;
+				font-weight: 600;
+				border-bottom: 1px solid var(--box-border);
+
+				> h1 {
+					text-wrap: nowrap;
+					padding: 4px 9px;
+				}
+				> button {
+					display: flex;
+					align-items: center;
+					gap: 4px;
+					overflow: hidden;
+					padding: 4px 9px;
+					text-wrap: nowrap;
+					text-overflow: ellipsis;
+					border-left: 1px dotted var(--box-border);
+					transition: 0.1s;
+
+					&:disabled {
+						color: var(--placeholder);
+					}
+					&:not(:disabled):active {
+						background-color: var(--box-hover);
+					}
+				}
+			}
+			> .search {
+				padding: 7px 9px;
+				width: 100%;
+				height: 39px;
+				background-color: var(--box-background);
+				border: 2px dotted var(--btn-border);
+				border-top: 0px;
+				border-bottom: 1px solid var(--box-border);
+			}
+			> .list {
+				position: relative;
+				overflow: hidden;
+				overflow-y: auto;
+				display: flex;
+				flex-direction: column;
+				padding: 12px;
+				gap: 10px;
+				height: calc(100% - 33px - 39px);
+				min-height: 68px;
+				border: 2px dotted var(--btn-border);
+				border-top: 0px;
+				border-bottom: 0px;
+				border-radius: 0px 0px 10px 10px;
+
+				> .region {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					border: 2px solid var(--btn-border);
+					border-radius: 7px;
+					background-color: var(--box-background);
+					box-shadow: 0px 0px 5px 1px var(--box-shadow);
+					transition: 0.1s;
+					cursor: pointer;
+
+					svg {
+						width: 20px;
+						height: 20px;
+					}
+
+					> .body {
+						display: flex;
+						align-items: center;
+						gap: 10px;
+						padding: 7px 9px;
+
+						> p {
+							flex: 1;
+							overflow: hidden;
+							text-wrap: nowrap;
+							text-overflow: ellipsis;
+							font-weight: 500;
+							font-size: 15px;
+						}
+
+						> .warn {
+							color: var(--btn-red-color);
+						}
+					}
+
+					> .micro {
+						display: flex;
+						overflow: hidden;
+						align-items: center;
+						justify-content: space-between;
+						gap: 10px;
+						padding: 1px 9px;
+						border-top: 1px solid var(--placeholder);
+						color: var(--placeholder);
+
+						> p {
+							flex: 1;
+							overflow: hidden;
+							text-wrap: nowrap;
+							text-overflow: ellipsis;
+							font-size: 13px;
+						}
+						> span {
+							flex: 0, 1;
+							overflow: hidden;
+							text-wrap: nowrap;
+							text-overflow: ellipsis;
+							font-size: 13px;
+						}
+					}
+					&:not(:disabled):active {
+						background-color: var(--box-hover);
+					}
+				}
+			}
+		}
+
+		> .pagination {
+			position: relative;
+			padding: 5px 7px;
+			border-radius: 10px;
+			background-color: var(--box-background);
+			box-shadow: 0px 0px 5px 1px var(--box-shadow);
+		}
+
+		.box {
+			padding: 10px 12px;
+			border-radius: 10px;
+			background-color: var(--box-background);
+			box-shadow: 0px 0px 5px 1px var(--box-shadow);
+
+			> p {
+				overflow: hidden;
+				text-wrap: nowrap;
+				text-overflow: ellipsis;
+				font-weight: 500;
+				font-size: 16px;
+			}
+		}
+
+		.not_found {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: var(--placeholder);
+			padding: 10px 12px;
+			height: 100%;
+		}
+	}
+}

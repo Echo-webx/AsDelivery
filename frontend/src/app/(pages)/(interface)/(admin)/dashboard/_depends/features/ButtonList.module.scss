@@ -1,0 +1,41 @@
+.button_list {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	gap: 10px;
+	padding: 5px 10px;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	> button {
+		user-select: none;
+		scroll-snap-align: center;
+		padding: 7px 9px;
+		text-wrap: nowrap;
+		font-weight: 500;
+		text-shadow:
+			-0.6px 0 var(--alt-shadow),
+			0 0.6px var(--alt-shadow),
+			0.6px 0 var(--alt-shadow),
+			0 -0.6px var(--alt-shadow);
+		border: 2px solid var(--btn-border);
+		border-radius: 10px;
+		background-color: var(--box-background);
+		box-shadow: 0px 0px 5px 1px var(--box-shadow);
+		transition: 0.1s;
+
+		&:not(:disabled):active {
+			background-color: var(--box-hover);
+		}
+		&.active {
+			background-color: var(--btn-hover);
+			&:not(:disabled):active {
+				background-color: var(--btn-hover);
+			}
+		}
+	}
+}
