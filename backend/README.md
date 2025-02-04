@@ -37,6 +37,9 @@ $ bun run start
 # watch mode
 $ bun run dev
 
+# build
+$ bun run build
+
 # production mode
 $ bun run prod
 ```
