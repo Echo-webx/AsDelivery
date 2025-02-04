@@ -6,27 +6,27 @@
 
 ## Description
 
-This is a mobile web application for delivery, consisting of a frontend on **Next.js** and backend on **NestJS**. The project was developed quite a long time ago, and despite the refactoring, there are still many problems in it.
+This is a mobile web application for internal delivery, built with **Next.js** on the frontend and **NestJS** on the backend. The project was originally developed quite some time ago, and despite multiple refactorings, it still has several issues.
 
-## Current issues
+## Current Issues
 
-- **Code duplication**: a large number of repetitive components and styles.
-- **Project structure**: requires improvement and optimization.
-- **Outdated dependencies**: Some libraries need to be updated.
-- **Testing**: Test coverage is required.
+- **Code duplication**: A significant number of repetitive components and styles.
+- **Project structure**: Needs improvement and optimization.
+- **Outdated dependencies**: Some libraries require updates.
+- **Testing**: Lacks sufficient test coverage.
 
-## Possible improvements
+## Possible Improvements
 
-- Conducting refactoring to eliminate code duplication.
-- Improved architecture and separation of logic.
+- Refactoring to eliminate code duplication.
+- Enhancing architecture and improving logic separation.
 - Updating dependencies.
-- Covering key parts with tests.
-- Rewrite styles in Tailwind CSS.
+- Adding test coverage for key parts of the application.
+- Rewriting styles using Tailwind CSS.
 
-## Additional information
+## Additional Information
 
-For more detailed setup and usage instructions, go to the appropriate folder [frontend](/frontend) or [backend](/backend).
+For detailed setup and usage instructions, refer to the respective folders: [frontend](/frontend) or [backend](/backend).
 
 ## License
 
-This project is licensed under the [GNU Affero General Public License v3.0](./LICENSE)
+This project is licensed under the [GNU Affero General Public License v3.0](./LICENSE).
