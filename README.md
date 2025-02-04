@@ -36,34 +36,6 @@
 - **Prisma**
 - **JWT для аутентификации**
 
-## Развертывание проекта
-
-### Установка зависимостей
-
-```sh
-npm install
-# or
-bun install
-```
-
-### Запуск frontend'а
-
-```sh
-cd frontend
-npm run dev
-# or
-bun run dev
-```
-
-### Запуск backend'а
-
-```sh
-cd backend
-npm run dev
-# or
-bun run dev
-```
-
 ## Дополнительная информация
 
 Для более подробных инструкций по настройке и использованию перейдите в соответствующую папку **frontend** или **backend**.
