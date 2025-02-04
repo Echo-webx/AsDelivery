@@ -55,7 +55,6 @@ $ bun run start
 ## Additional information
 
 - The application fetches data from the **NestJS backend**.
-- Environment variables are used to manage API endpoints and other configurations.
 - Uses **Next.js App Router** for modern routing and layout management.
 
 ## License
