@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://nextjs.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" width="200" alt="Next.js Logo" /></a>
+  <a href="https://nextjs.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" width="500" alt="Next.js Logo" /></a>
 </p>
 <p align="center">A powerful <a href="https://react.dev/" target="_blank">React</a> framework for building fast and scalable frontend applications.</p>
 
