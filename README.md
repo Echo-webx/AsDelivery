@@ -1,24 +1,25 @@
 # AsDelivery
 
-## Описание
+## Description
 
-Это внутреннее веб-приложение для доставки, состоящее из frontend'а на **Next.js** и backend'а на **NestJS**. Проект был разработан достаточно давно, и несмотря на проведённый рефакторинг, в нём всё ещё присутствует множество проблем.
+This is an internal web application for delivery, consisting of a frontend on **Next.js** and backend on **NestJS**. The project was developed quite a long time ago, and despite the refactoring, there are still many problems in it.
 
-## Текущие проблемы
+## Current issues
 
-- **Дублирование кода**: большое количество повторяющихся компонентов и стилей.
-- **Структура проекта**: требует улучшения и оптимизации.
-- **Устаревшие зависимости**: некоторые библиотеки нуждаются в обновлении.
-- **Тестирование**: требуется покритие тестами.
+- **Code duplication**: a large number of repetitive components and styles.
+- **Project structure**: requires improvement and optimization.
+- **Outdated dependencies**: Some libraries need to be updated.
+- **Testing**: Test coverage is required.
 
-## Возможные улучшения
+## Possible improvements
 
-- Проведение рефакторинга для устранения дублирования кода.
-- Улучшение архитектуры и разделение логики.
-- Обновление зависимостей.
-- Покрытие ключевых частей тестами.
+- Carrying out refactoring to eliminate code duplication.
+- Improved architecture and separation of logic.
+- Updating dependencies.
+- Covering key parts with tests.
+- Rewrite styles in Tailwind CSS.
 
-## Основной технологический стек
+## The main technology stack
 
 ### Frontend:
 
@@ -34,8 +35,8 @@
 - **TypeScript**
 - **MongoDB**
 - **Prisma**
-- **JWT для аутентификации**
+- **JWT for authentication**
 
-## Дополнительная информация
+## Additional information
 
-Для более подробных инструкций по настройке и использованию перейдите в соответствующую папку **frontend** или **backend**.
+For more detailed setup and usage instructions, go to the appropriate folder **frontend** or **backend**.
