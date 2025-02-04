@@ -1,18 +1,64 @@
-## Getting Started
+<p align="center">
+  <a href="https://nextjs.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" width="200" alt="Next.js Logo" /></a>
+</p>
+<p align="center">A powerful <a href="https://react.dev/" target="_blank">React</a> framework for building fast and scalable frontend applications.</p>
 
-First, run the development server:
+# AsDelivery Frontend
+
+## Features
+
+- Server-side rendering (SSR) and static site generation (SSG)
+- Global state management Zustand 
+- Component-based architecture
+- Modern styling with Tailwind CSS
+- API integration with NestJS backend
+- Interactive maps with **@2gis/mapgl**
+- Data fetching and caching with **@tanstack/react-query**
+- Charts and visualizations using **chart.js** and **react-chartjs-2**
+- Theming support with **next-themes**
+- Notifications via **react-hot-toast**
+
+## Installation
 
 ```bash
-bun dev
+$ bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the app
 
-## Learn More
+```bash
+# development mode
+$ bun run dev
 
-To learn more about Next.js, take a look at the following resources:
+# build the application
+$ bun run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# production mode
+$ bun run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Dependencies
+
+**Main dependencies:**
+- Next.js 15
+- React 19
+- Zustand
+- Axios
+- Sass
+- Lucide React
+
+**Development dependencies:**
+- TypeScript
+- ESLint & Prettier
+- PostCSS
+
+## Additional information
+
+- The application fetches data from the **NestJS backend**.
+- Environment variables are used to manage API endpoints and other configurations.
+- Uses **Next.js App Router** for modern routing and layout management.
+
+## License
+
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**. See the [LICENSE](../LICENSE) file for more details.
+
