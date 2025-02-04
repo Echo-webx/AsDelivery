@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common'
-import { createId } from '@paralleldrive/cuid2'
 import { EnumUserRole, Prisma, User } from '@prisma/client'
 import { hash } from 'argon2'
 import { Search } from 'src/common/dto/main.dto'
@@ -8,6 +7,7 @@ import {
 	handlePrismaError,
 	PrismaService
 } from 'src/core/services/prisma.service'
+import { v4 as uuidV4 } from 'uuid'
 import { UserCreateDto, UserUpdateDto } from './dto/user.dto'
 import { UserGetByService } from './user-getBy.service'
 
@@ -99,7 +99,7 @@ export class UserService {
 	}
 
 	async create(dto: UserCreateDto) {
-		const genPassword = createId().slice(0, 8)
+		const genPassword = uuidV4()
 		const password = await hash(genPassword)
 
 		try {
