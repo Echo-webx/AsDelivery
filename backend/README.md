@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank">
+  <a href="http://nestjs.com/" target="_blank">
     <img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" />
   </a>
 </p>
@@ -9,10 +9,10 @@
 
 ## Features
 
-- JWT authorization
-- Prisma ORM for working with the database
-- Processing of mail notifications (Mailer / Nodemailer)
-- Security (Helmet, Passport)
+- **JWT authorization**
+- **Prisma ORM** for database management
+- **Email notifications** processing (Mailer / Nodemailer)
+- **Security** enhancements (Helmet, Passport)
 
 ## Installation
 
@@ -20,44 +20,44 @@
 $ bun install
 ```
 
-## Running the app
+## Running the App
 
 ```bash
-# development mode
+# Start in development mode
 $ bun run start
 
-# watch mode
+# Watch mode (auto-restart on changes)
 $ bun run dev
 
-# build the application
+# Build the application
 $ bun run build
 
-# production mode
+# Start in production mode
 $ bun run prod
 ```
 
-
 ## Dependencies
 
-**Main dependencies:**
-- Nest.js
-- Passport
-- Argon2
-- Uuid
-- Helmet
-- React-email
+### Main Dependencies:
 
-**Development dependencies:**
-- TypeScript
-- ESLint & Prettier
-- Prisma
+- **Nest.js**
+- **Passport**
+- **Argon2**
+- **UUID**
+- **Helmet**
+- **React-email**
 
-## Additional information
+### Development Dependencies:
 
-- Use environment variables to configure the configuration.
+- **TypeScript**
+- **ESLint & Prettier**
+- **Prisma**
+
+## Additional Information
+
+- Uses environment variables for configuration.
 - The default database is **MongoDB**.
 
 ## License
 
-This project is licensed under the [GNU Affero General Public License v3.0](../LICENSE)
-
+This project is licensed under the [GNU Affero General Public License v3.0](../LICENSE).
