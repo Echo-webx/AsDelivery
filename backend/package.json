@@ -1,9 +1,12 @@
 {
 	"name": "backend",
 	"version": "0.0.1",
-	"author": "Makoveev Kirill",
+	"author": {
+		"name": "Kirill",
+		"email": "echo.webx@gmail.com"
+	},
 	"private": true,
-	"license": "UNLICENSED",
+	"license": "AGPL-3.0",
 	"scripts": {
 		"build": "nest build",
 		"dev": "nest start --watch",

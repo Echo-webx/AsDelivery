@@ -1,8 +1,12 @@
 {
 	"name": "frontend",
 	"version": "0.1.0",
-	"author": "Makoveev Kirill",
+	"author": {
+		"name": "Kirill",
+		"email": "echo.webx@gmail.com"
+	},
 	"private": true,
+	"license": "AGPL-3.0",
 	"scripts": {
 		"dev": "next dev -p 8080 --turbopack",
 		"build": "next build",
