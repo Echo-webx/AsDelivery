@@ -39,5 +39,7 @@ $ bun run prod
 - Use environment variables to configure the configuration.
 - The default database is **MongoDB**.
 
+## License
 
+This project is licensed under the [GNU Affero General Public License v3.0](../LICENSE)
 
