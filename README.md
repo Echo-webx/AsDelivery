@@ -19,24 +19,6 @@ This is an internal web application for delivery, consisting of a frontend on **
 - Covering key parts with tests.
 - Rewrite styles in Tailwind CSS.
 
-## The main technology stack
-
-### Frontend:
-
-- **Next.js**
-- **React**
-- **TypeScript**
-- **CSS Modules**
-- **Zustand**
-
-### Backend:
-
-- **NestJS**
-- **TypeScript**
-- **MongoDB**
-- **Prisma**
-- **JWT for authentication**
-
 ## Additional information
 
 For more detailed setup and usage instructions, go to the appropriate folder **frontend** or **backend**.
