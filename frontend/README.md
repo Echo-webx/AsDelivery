@@ -49,7 +49,7 @@ The application will run on **http://localhost:3000**
 - Zustand
 - Axios
 - Sass
-- Lucide React
+- Next-pwa
 
 **Development dependencies:**
 
