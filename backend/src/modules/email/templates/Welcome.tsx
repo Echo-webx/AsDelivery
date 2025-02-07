@@ -13,7 +13,7 @@ interface WelcomeTemplateProps {
 	password: string
 }
 
-const frontEndUrl = process.env.FRONT_END_URL
+const frontEndUrl = process.env.FRONTEND_URL
 const imgSrc = process.env.IMAGE_EMAIL
 
 export const welcomeTemplate = async (password: string) =>

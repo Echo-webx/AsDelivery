@@ -12,7 +12,7 @@ async function bootstrap() {
 
 	const config = app.get(ExtConfigService)
 	const urls = config
-		.getOrThrow<string>('FRONT_END_URL')
+		.getOrThrow<string>('FRONTEND_URL')
 		?.split(',')
 		?.map(url => url.trim())
 

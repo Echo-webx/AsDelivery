@@ -13,7 +13,7 @@ interface ResetPasswordTemplateProps {
 	resetUrl: string
 }
 
-const frontEndUrl = process.env.FRONT_END_URL
+const frontEndUrl = process.env.FRONTEND_URL
 const imgSrc = process.env.IMAGE_EMAIL
 
 export const resetPasswordTemplate = async (resetUrl: string) =>
