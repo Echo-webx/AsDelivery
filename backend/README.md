@@ -23,11 +23,11 @@ $ bun install
 ## Running the App
 
 ```bash
-# Start in development mode
-$ bun run start
-
 # Watch mode (auto-restart on changes)
 $ bun run dev
+
+# Start in development mode
+$ bun run start
 
 # Build the application
 $ bun run build
@@ -37,6 +37,35 @@ $ bun run prod
 ```
 
 The application will run on **http://localhost:4000**
+
+## Environment Variables
+
+To properly configure the application, make sure to specify the following environment variables in your `.env` file:
+
+```env
+FRONT_END_URL=<your-frontend-url>
+DOMAIN=<your-domain>
+SAME_SITE="lax"
+
+DATABASE_URL=<your-database-url>
+
+# JWT options
+JWT_ACCESS_EXPIRES_IN=<your-jwt-access-expires-in> # In days
+JWT_REFRESH_EXPIRES_IN=<your-jwt-refresh-expires-in> # In days
+JWT_ACCESS_SECRET=<your-jwt-access-secret>
+JWT_REFRESH_SECRET=<your-jwt-refresh-secret>
+
+# SMTP configuration
+SMTP_HOST=<your-smtp-host>
+SMTP_USER=<your-smtp-user>
+SMTP_PASS=<your-smtp-password>
+
+# Default root user (auto-created if missing)
+DEFAULT_ROOT_EMAIL=<your-root-email>
+DEFAULT_ROOT_PASSWORD=<your-root-password>
+```
+
+These variables are required for database connection, authentication, email notifications, and security settings.
 
 ## Dependencies
 
@@ -63,3 +92,4 @@ The application will run on **http://localhost:4000**
 ## License
 
 This project is licensed under the [GNU Affero General Public License v3.0](../LICENSE).
+
