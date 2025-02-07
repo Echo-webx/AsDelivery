@@ -6,7 +6,7 @@
 
 ## Description
 
-This is a mobile web application for internal delivery, built with **Next.js** on the frontend and **NestJS** on the backend. The project was originally developed quite some time ago, and despite multiple refactorings, it still has several issues.
+This is a mobile web application for internal delivery, built with Next.js on the frontend and NestJS on the backend. The project was developed a long time ago, and despite some refactoring, it still has a lot of problems.
 
 ## Current Issues
 
