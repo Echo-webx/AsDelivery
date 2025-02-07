@@ -43,7 +43,7 @@ The application will run on **http://localhost:4000**
 To properly configure the application, make sure to specify the following environment variables in your `.env` file:
 
 ```env
-FRONT_END_URL=<your-frontend-url>
+FRONTEND_URL=<your-frontend-url>
 DOMAIN=<your-domain>
 SAME_SITE="lax"
 
