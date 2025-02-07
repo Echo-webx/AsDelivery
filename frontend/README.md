@@ -44,7 +44,7 @@ The application will run on **http://localhost:3000**
 To properly configure the application, make sure to specify the following environment variables in your `.env` file:
 
 ```env
-NEXT_PUBLIC_API_URL=<your-api-url>
+NEXT_PUBLIC_BACKEND_URL=<your-backend-url>
 NEXT_PUBLIC_DOMAIN=<your-domain>
 NEXT_PUBLIC_ACCESS_EXPIRES_IN=<your-token-expires-in> # Must be equal to the value of <jwt-access-expires-in> from the backend
 NEXT_PUBLIC_2GIS_KEY=<your-2gis-api-key>

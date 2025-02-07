@@ -1,4 +1,4 @@
-export const API_URL = process.env.NEXT_PUBLIC_API_URL
+export const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL
 export const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN
 export const TOKEN_EXPIRES = new Date(
 	Date.now() +
