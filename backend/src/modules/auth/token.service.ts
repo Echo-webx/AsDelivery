@@ -108,7 +108,8 @@ export class TokenService {
 	addRefreshTokenToResponse(res: Response, refreshToken: string) {
 		const expiresIn = new Date()
 		expiresIn.setDate(
-			expiresIn.getDate() + this.configService.get<number>('REFRESH_EXPIRES_IN')
+			expiresIn.getDate() +
+				this.configService.get<number>('JWT_REFRESH_EXPIRES_IN')
 		)
 
 		res.cookie(this.REFRESH_TOKEN_NAME, refreshToken, {

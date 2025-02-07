@@ -19,7 +19,7 @@ export class JwtConfig {
 	}
 	getAccessSignOptions(): Pick<JwtModuleOptions['signOptions'], 'expiresIn'> {
 		return {
-			expiresIn: `${this.config.getOrThrow<number>('ACCESS_EXPIRES_IN')}d`
+			expiresIn: `${this.config.getOrThrow<number>('JWT_ACCESS_EXPIRES_IN')}d`
 		}
 	}
 	generateAccess(): JwtModuleOptions {
@@ -36,7 +36,7 @@ export class JwtConfig {
 	}
 	getRefreshSignOptions(): Pick<JwtModuleOptions['signOptions'], 'expiresIn'> {
 		return {
-			expiresIn: `${this.config.getOrThrow<number>('REFRESH_EXPIRES_IN')}d`
+			expiresIn: `${this.config.getOrThrow<number>('JWT_REFRESH_EXPIRES_IN')}d`
 		}
 	}
 	generateRefresh(): JwtModuleOptions {
