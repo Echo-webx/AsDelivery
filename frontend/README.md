@@ -39,6 +39,18 @@ $ bun run start
 
 The application will run on **http://localhost:3000**
 
+## Environment Variables
+
+To properly configure the application, make sure to specify the following environment variables in your `.env` file:
+
+```env
+NEXT_PUBLIC_API_URL=<your-api-url>
+NEXT_PUBLIC_DOMAIN=<your-domain>
+NEXT_PUBLIC_TOKEN_EXPIRES=<token-expiration-in-days>
+NEXT_PUBLIC_2GIS_KEY=<your-2gis-api-key>
+```
+
+These variables are required for API communication, authentication handling, and map integration.
 
 ## Dependencies
 
