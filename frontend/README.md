@@ -46,7 +46,7 @@ To properly configure the application, make sure to specify the following enviro
 ```env
 NEXT_PUBLIC_API_URL=<your-api-url>
 NEXT_PUBLIC_DOMAIN=<your-domain>
-NEXT_PUBLIC_TOKEN_EXPIRES=<token-expiration-in-days>
+NEXT_PUBLIC_TOKEN_EXPIRES=<your-token-expires> # Must be equal to the value of <jwt-access-expires-in> from the backend
 NEXT_PUBLIC_2GIS_KEY=<your-2gis-api-key>
 ```
 
