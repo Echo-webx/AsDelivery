@@ -40,15 +40,14 @@ export class ExtConfigService extends ConfigService implements OnModuleInit {
 		try {
 			const user = await this.prisma.user.findFirst({
 				where: {
-					email: this.getOrThrow<string>('DEFAULT_ROOT_EMAIL'),
-					role: EnumUserRole.root
+					email: this.getOrThrow<string>('DEFAULT_ROOT_EMAIL')
 				},
 				select: { id: true }
 			})
 			if (user) return
 
 			const email = this.getOrThrow<string>('DEFAULT_ROOT_EMAIL')
-			const password = this.getOrThrow<string>('DEFAULT_ROOT_PASS')
+			const password = this.getOrThrow<string>('DEFAULT_ROOT_PASSWORD')
 			if (!email || !password) return
 
 			await this.prisma.user.create({
