@@ -1,6 +1,9 @@
 <p align="center">
-  <img src="./frontend/public/images/pwa/favicon.svg" width="200" alt="Project Logo" />
+    <a href="https://github.com/YAI-team/AsDelivery/" target="blank">
+      <img src="./frontend/public/images/pwa/favicon.svg" width="200" alt="Project Logo" />
+     </a>
 </p>
+
 
 # AsDelivery
 
