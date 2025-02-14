@@ -3,7 +3,7 @@
       <img src="./frontend/public/images/pwa/favicon.svg" width="200" alt="Project Logo" />
     </a>
 </p>
-<p align="center">An internal web app using Next.js and Nest.js for delivery management.</p>
+<p align="center">An internal web app using [Next.js](./frontend) and [Nest.js](./backend) for delivery management.</p>
 
 <h1 align="center">AsDelivery</h1>
 
