@@ -15,7 +15,7 @@ export type TypeEmail = {
 }
 
 export type TypeReset = {
-	token: string
+	token?: string
 	password: string
 	passwordConfirm: string
 }

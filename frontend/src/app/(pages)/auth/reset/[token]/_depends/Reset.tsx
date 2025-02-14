@@ -14,7 +14,7 @@ import styles from './Reset.module.scss'
 import { useReset } from './hooks/useReset'
 
 interface Props {
-	token: string
+	token?: string
 }
 
 export function Reset({ token }: Props) {
