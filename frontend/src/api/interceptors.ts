@@ -4,18 +4,18 @@ import { authService } from '@/services/auth.service'
 import { getAccessToken, removeAccessToken } from '@/services/token.service'
 
 export const setupAxiosAuthInterceptors = (axiosAuth: AxiosInstance) => {
-	axiosAuth.interceptors.request.use(value => {
+	axiosAuth.interceptors.request.use(config => {
 		const accessToken = getAccessToken()
-		if (accessToken) value.headers.Authorization = `Bearer ${accessToken}`
+		if (accessToken) config.headers.Authorization = `Bearer ${accessToken}`
 
-		return value
+		return config
 	})
 
 	axiosAuth.interceptors.response.use(null, async error => {
 		if (isAxiosError(error)) {
 			const originalRequest: any = error.config
 			const validRequest =
-				error?.response?.status === 401 &&
+				error.response?.status === 401 &&
 				(error.message === 'jwt expired' ||
 					error.message === 'jwt must be provided')
 
