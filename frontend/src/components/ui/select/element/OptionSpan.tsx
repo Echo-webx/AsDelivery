@@ -1,5 +1,7 @@
 'use client'
 
+import type { JSX } from 'react'
+
 import type { OptionProps } from './Option'
 import styles from './OptionSpan.module.scss'
 

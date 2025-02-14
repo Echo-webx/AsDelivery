@@ -1,5 +1,7 @@
 'use client'
 
+import type { JSX } from 'react'
+
 import styles from './Option.module.scss'
 
 export interface OptionProps {
