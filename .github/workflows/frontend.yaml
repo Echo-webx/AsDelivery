@@ -1,0 +1,29 @@
+name: Frontend CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Common Setup
+        uses: ./.github/common
+        with:
+          node-version: '22.12'
+          bun-version: '1.2.2'
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: bun install --frozen-lockfile
+
+      - name: Build frontend
+        working-directory: frontend
+        run: bun run build
+
+      # - name: Run unit tests
+      #   working-directory: frontend
+      #   run: bun run test:unit
