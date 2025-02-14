@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Common Setup
-        uses: ./.github/actions
+        uses: ./.github/actions/common-setup
         with:
           node-version: '22.12'
           bun-version: '1.2.2'
