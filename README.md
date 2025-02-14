@@ -1,8 +1,11 @@
 <p align="center">
-  <img src="./frontend/public/images/pwa/favicon.svg" width="200" alt="Project Logo" />
+    <a href="https://github.com/YAI-team/AsDelivery/" target="blank">
+      <img src="./frontend/public/images/pwa/favicon.svg" width="200" alt="Project Logo" />
+    </a>
 </p>
+<p align="center">An internal web app using <a href="./frontend">Next.js</a> and <a href="./backend">Nest.js</a> for delivery management.</p>
 
-# AsDelivery
+<h1 align="center">AsDelivery</h1>
 
 ## Description
 
