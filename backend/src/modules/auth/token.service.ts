@@ -14,7 +14,7 @@ import { ExtConfigService } from '../../core/services/config.service'
 @Injectable()
 export class TokenService {
 	constructor(
-		private readonly configService: ExtConfigService,
+		private readonly config: ExtConfigService,
 		private readonly jwt: JwtService,
 		private readonly jwtConfig: JwtConfig,
 		private readonly userGetBy: UserGetByService
@@ -108,26 +108,25 @@ export class TokenService {
 	addRefreshTokenToResponse(res: Response, refreshToken: string) {
 		const expiresIn = new Date()
 		expiresIn.setDate(
-			expiresIn.getDate() +
-				this.configService.get<number>('JWT_REFRESH_EXPIRES_IN')
+			expiresIn.getDate() + this.config.get('JWT_REFRESH_EXPIRES_IN')
 		)
 
 		res.cookie(this.REFRESH_TOKEN_NAME, refreshToken, {
 			httpOnly: true,
-			domain: this.configService.get('DOMAIN'),
+			domain: this.config.get('DOMAIN'),
 			expires: expiresIn,
-			secure: !isDev(this.configService),
-			sameSite: this.configService.get('SAME_SITE')
+			secure: !isDev(this.config),
+			sameSite: this.config.get('SAME_SITE')
 		})
 	}
 
 	removeRefreshTokenFromResponse(res: Response) {
 		res.cookie(this.REFRESH_TOKEN_NAME, '', {
 			httpOnly: true,
-			domain: this.configService.get('DOMAIN'),
+			domain: this.config.get('DOMAIN'),
 			expires: new Date(0),
-			secure: !isDev(this.configService),
-			sameSite: this.configService.get('SAME_SITE')
+			secure: !isDev(this.config),
+			sameSite: this.config.get('SAME_SITE')
 		})
 	}
 }
