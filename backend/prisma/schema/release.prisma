@@ -1,0 +1,83 @@
+enum EnumProductReleaseStatus {
+    confirm
+    warning
+    edit
+    error
+}
+
+enum EnumProductReleaseMarking {
+    accounting
+    deleted
+    null
+}
+
+// ----------Product release
+
+model ProductRelease {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    createdAt DateTime @default(now()) @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at")
+
+    user          User?   @relation(fields: [userId], references: [id])
+    userId        String? @map("user_id") @db.ObjectId
+    archiveUserId String  @map("archive_user_id")
+
+    address          Address? @relation(fields: [addressId], references: [id])
+    addressId        String?  @map("address_id") @db.ObjectId
+    archiveAddressId String   @map("archive_address_id")
+
+    region          Region? @relation(fields: [regionId], references: [id])
+    regionId        String? @map("region_id") @db.ObjectId
+    archiveRegionId String  @map("archive_region_id")
+
+    tag     String                    @unique
+    status  EnumProductReleaseStatus
+    marking EnumProductReleaseMarking @default(null)
+
+    totalCount      Int  @map("total_count")
+    totalCountEdit  Int? @map("total_count_edit")
+    totalCountError Int? @map("total_count_error")
+
+    totalAmount Float @map("total_amount")
+    totalSale   Int   @map("total_sale")
+    totalSwap   Int   @map("total_swap")
+    totalBonus  Int   @map("total_bonus")
+
+    userFIO         String  @map("user_fio")
+    addressName     String  @map("address_name")
+    addressPosition String? @map("address_position")
+    regionName      String  @map("region_name")
+
+    position ProductReleasePosition[]
+
+    @@map("product_release")
+}
+
+model ProductReleasePosition {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    createdAt DateTime @default(now()) @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at")
+
+    productRelease   ProductRelease? @relation(fields: [productReleaseId], references: [id], onDelete: Cascade)
+    productReleaseId String?         @map("product_release_id") @db.ObjectId
+
+    product          Product? @relation(fields: [productId], references: [id])
+    productId        String?  @map("product_id") @db.ObjectId
+    archiveProductId String   @map("archive_product_id")
+
+    unit          EnumProductUnit @default(piece)
+    name          String
+    salePrice     Float           @map("sale_price")
+    purchasePrice Float           @map("purchase_price")
+
+    count      Int
+    countEdit  Int? @map("count_edit")
+    countError Int? @map("count_error")
+
+    amount        Int
+    quantitySale  Int @map("quantity_sale")
+    quantitySwap  Int @map("quantity_swap")
+    quantityBonus Int @map("quantity_bonus")
+
+    @@map("product_release_position")
+}

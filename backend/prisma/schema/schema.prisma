@@ -1,0 +1,111 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["prismaSchemaFolder"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// ----------Enums
+
+enum EnumUserRole {
+  root
+  manager
+  default
+}
+
+// ----------General
+
+model General {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  startWorking Int     @default(9) @map("start_working")
+  endWorking   Int     @default(18) @map("end_working")
+  activeMap    Boolean @default(true) @map("active_map")
+
+  @@map("general")
+}
+
+// ----------User
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  activeRegion   Region? @relation(fields: [activeRegionId], references: [id])
+  activeRegionId String? @map("active_region_id") @db.ObjectId
+
+  resetPasswordToken   String?   @map("reset_password_token")
+  resetPasswordTimeOut DateTime? @map("reset_password_time_out")
+
+  email    String       @unique
+  password String
+  role     EnumUserRole @default(default)
+
+  checkRegion Boolean @default(true) @map("check_region")
+  count       Int     @default(0)
+
+  info                  UserInfo?
+  salary                Salary[]
+  productRelease        ProductRelease[]
+  productReception      ProductReception[]
+  linkRegions           UserToRegion[]
+  linkProducts          ProductToUser[]
+  linkProductCategories ProductCategoryToUser[]
+
+  @@map("user")
+}
+
+model UserInfo {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String @unique @map("user_id") @db.ObjectId
+
+  name        String
+  surname     String
+  patronymic  String
+  birthday    DateTime?
+  jobPosition String    @map("job_position")
+
+  @@map("user_info")
+}
+
+model ProductToUser {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String  @map("user_id") @db.ObjectId
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String  @map("product_id") @db.ObjectId
+
+  count Int @default(0)
+
+  @@unique([userId, productId])
+  @@map("product_to_user")
+}
+
+model ProductCategoryToUser {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user              User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId            String          @map("user_id") @db.ObjectId
+  productCategory   ProductCategory @relation(fields: [productCategoryId], references: [id], onDelete: Cascade)
+  productCategoryId String          @map("product_category_id") @db.ObjectId
+
+  count Int @default(0)
+
+  @@unique([userId, productCategoryId])
+  @@map("product_category_to_user")
+}

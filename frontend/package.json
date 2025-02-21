@@ -1,0 +1,58 @@
+{
+	"name": "frontend",
+	"version": "0.0.1",
+	"author": {
+		"name": "YAI team",
+		"email": "help.yai.team@gmail.com"
+	},
+	"private": true,
+	"license": "AGPL-3.0",
+	"scripts": {
+		"dev": "next dev -p 3000 --turbopack",
+		"build": "next build",
+		"start": "next start -p 3000",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@2gis/mapgl": "^1.56.0",
+		"@tanstack/react-query": "^5.66.0",
+		"axios": "^1.7.9",
+		"chart.js": "^4.4.7",
+		"clsx": "^2.1.1",
+		"dayjs": "^1.11.13",
+		"js-cookie": "^3.0.5",
+		"lodash.debounce": "^4.0.8",
+		"lucide-react": "^0.475.0",
+		"next": "^15.1.6",
+		"next-pwa": "^5.6.0",
+		"next-themes": "^0.4.4",
+		"react": "^19.0.0",
+		"react-chartjs-2": "^5.3.0",
+		"react-dom": "^19.0.0",
+		"react-hook-form": "^7.54.2",
+		"react-hot-toast": "^2.5.1",
+		"sass": "^1.83.4",
+		"tailwind-merge": "^3.0.1",
+		"uuid": "^11.0.5",
+		"zustand": "^5.0.3"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3",
+		"@tailwindcss/postcss": "^4.0.3",
+		"@trivago/prettier-plugin-sort-imports": "^5.2.2",
+		"@types/js-cookie": "^3.0.6",
+		"@types/lodash.debounce": "^4.0.9",
+		"@types/next-pwa": "5.6.0",
+		"@types/react": "^19.0.8",
+		"@types/react-dom": "^19.0.3",
+		"@types/uuid": "^10.0.0",
+		"postcss": "^8.5.1",
+		"prettier": "^3.4.2",
+		"tailwindcss": "3.4.1",
+		"typescript": "^5.7.3"
+	},
+	"engines": {
+		"node": "22.12.0",
+		"bun": "1.2.2"
+	}
+}

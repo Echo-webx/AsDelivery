@@ -1,0 +1,30 @@
+.option {
+	padding: 5px 7px;
+	cursor: pointer;
+	text-align: left;
+	border-bottom: 1px solid var(--box-border);
+	transition: 0.1s;
+
+	> .item {
+		display: flex;
+		overflow: hidden;
+		align-items: center;
+		justify-content: space-between;
+		gap: 5px;
+
+		> p {
+			flex: 1;
+			overflow: hidden;
+			text-wrap: nowrap;
+			text-overflow: ellipsis;
+			font-size: 14px;
+		}
+	}
+
+	&:nth-last-child(1) {
+		border-bottom: none;
+	}
+	&:active {
+		background-color: var(--box-hover);
+	}
+}

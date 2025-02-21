@@ -1,0 +1,60 @@
+.not_success {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--btn-red-color);
+	font-size: 20px;
+	padding: 10px 12px;
+	height: 100%;
+	font-weight: bold;
+}
+
+.main {
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 5px 0px;
+	height: 100%;
+
+	> .form {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding: 5px 10px;
+
+		> .link {
+			user-select: none;
+			display: flex;
+			gap: 10px;
+			padding: 10px 12px;
+			border: 2px solid var(--btn-border);
+			border-radius: 10px;
+			background-color: var(--box-background);
+			box-shadow: 0px 0px 5px 1px var(--box-shadow);
+			transition: 0.1s;
+
+			> p {
+				overflow: hidden;
+				text-wrap: nowrap;
+				text-overflow: ellipsis;
+				font-weight: 500;
+				font-size: 16px;
+			}
+
+			&:not(:disabled):active {
+				color: white;
+				text-shadow:
+					-0.6px 0 black,
+					0 0.6px black,
+					0.6px 0 black,
+					0 -0.6px black;
+				border-color: #ffffff36;
+				background-color: var(--btn-blue-active);
+
+				svg {
+					filter: drop-shadow(0px 0px 5px black);
+				}
+			}
+		}
+	}
+}

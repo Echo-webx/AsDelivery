@@ -1,0 +1,217 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	padding: 10px 0px;
+	gap: 5px;
+	height: 100%;
+
+	> .buttons {
+		position: relative;
+		display: flex;
+		gap: 7px;
+		padding: 0px 10px;
+		min-height: 42px;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		> button {
+			user-select: none;
+			padding: 7px 9px;
+			width: 100%;
+			text-wrap: nowrap;
+			font-weight: 500;
+			text-shadow:
+				-0.6px 0 var(--alt-shadow),
+				0 0.6px var(--alt-shadow),
+				0.6px 0 var(--alt-shadow),
+				0 -0.6px var(--alt-shadow);
+			border: 2px solid var(--btn-border);
+			border-radius: 10px;
+			background-color: var(--box-background);
+			box-shadow: 0px 0px 5px 1px var(--box-shadow);
+			transition: 0.1s;
+
+			&:not(:disabled):active {
+				background-color: var(--box-hover);
+			}
+			&.active {
+				background-color: var(--btn-hover);
+				&:not(:disabled):active {
+					background-color: var(--btn-hover);
+				}
+			}
+		}
+	}
+	> .select_report {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+		padding: 5px 10px 0px 10px;
+
+		> .flex {
+			display: flex;
+			gap: 5px;
+
+			> .rSelect {
+				width: calc(100% - 150px - 47px);
+
+				> span {
+					left: -150px;
+					width: calc(100% + 150px + 47px);
+				}
+			}
+
+			> .rField {
+				flex: 1;
+
+				> input {
+					min-width: 145px;
+					height: 42px;
+					background-color: var(--box-background);
+					border: 2px solid var(--box-border);
+					border-radius: 10px;
+					box-shadow: 0px 0px 5px 1px var(--box-shadow);
+
+					&:not(:disabled):focus {
+						background-color: var(--box-background);
+						border-color: var(--box-border);
+					}
+
+					&:not(:disabled):active {
+						background-color: var(--box-hover);
+					}
+				}
+			}
+
+			> .btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 42px;
+				min-width: 42px;
+				background-color: var(--box-background);
+				border: 2px solid var(--box-border);
+				border-radius: 10px;
+				box-shadow: 0px 0px 5px 1px var(--box-shadow);
+				transition: 0.1s;
+
+				&:not(:disabled):active {
+					background-color: var(--box-hover);
+				}
+			}
+		}
+
+		> .settings {
+			z-index: 11;
+			overflow: hidden;
+			position: absolute;
+			top: calc(42px + 7px);
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			background-color: var(--box-background);
+			border: 2px solid var(--box-border);
+			border-radius: 10px;
+			padding: 4px;
+			gap: 3px;
+
+			> button {
+				user-select: none;
+				padding: 4px 9px;
+				height: 100%;
+				text-align: left;
+				font-weight: 500;
+				text-shadow:
+					-0.6px 0 var(--alt-shadow),
+					0 0.6px var(--alt-shadow),
+					0.6px 0 var(--alt-shadow),
+					0 -0.6px var(--alt-shadow);
+				border: 2px solid var(--btn-border);
+				border-radius: 7px;
+				background-color: var(--btn-color);
+				transition: 0.1s;
+
+				&:not(:disabled):active {
+					background-color: var(--box-hover);
+				}
+				&.active {
+					background-color: var(--btn-hover);
+					&:not(:disabled):active {
+						background-color: var(--btn-hover);
+					}
+				}
+			}
+		}
+
+		.rSelect {
+			> div {
+				border-radius: 10px;
+				box-shadow: 0px 0px 5px 1px var(--box-shadow);
+			}
+			> span {
+				border-radius: 10px;
+			}
+
+			.rSpan {
+				padding: 0px 9px;
+				overflow: hidden;
+				flex: 0, 1;
+				min-width: 90px;
+				font-size: 15px;
+				text-align: center;
+				text-wrap: nowrap;
+				text-overflow: ellipsis;
+				border: 2px solid var(--btn-border);
+				border-radius: 4px;
+				background-color: var(--btn-blue-color);
+				font-weight: 500;
+				color: white;
+				text-shadow:
+					-0.6px 0 black,
+					0 0.6px black,
+					0.6px 0 black,
+					0 -0.6px black;
+				border-color: #ffffff36;
+
+				&.green {
+					background-color: var(--btn-green-color);
+				}
+				&.red {
+					background-color: var(--btn-red-color);
+				}
+			}
+		}
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-7px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.fadeIn {
+	animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-7px);
+	}
+}
+.fadeOut {
+	animation: fadeOut 0.2s ease forwards;
+}

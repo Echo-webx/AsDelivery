@@ -1,0 +1,187 @@
+.not_success {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--btn-red-color);
+	font-size: 20px;
+	padding: 10px 12px;
+	height: 100%;
+	font-weight: bold;
+}
+
+.main {
+	overflow: hidden;
+	overflow-y: auto;
+	flex: 1;
+
+	> .header {
+		position: relative;
+		padding-top: 175px;
+
+		> .img {
+			z-index: -1;
+			position: absolute;
+			top: 0;
+			height: 230px;
+			width: 100%;
+		}
+		> .form {
+			position: relative;
+			padding: 0px 10px;
+			margin-bottom: 10px;
+
+			> .avatar {
+				z-index: 1;
+				position: absolute;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				left: calc(50% - 45px);
+				color: var(--delta-color);
+				top: -45px;
+				width: 90px;
+				height: 90px;
+				background-color: var(--box-background);
+				border: 2px solid var(--btn-border);
+				border-radius: 50%;
+			}
+			> .info {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 60px 12px 10px 12px;
+				border-radius: 10px;
+				background-color: var(--box-trans);
+				backdrop-filter: blur(10px);
+				box-shadow: 0px 0px 5px 1px var(--box-shadow);
+				font-weight: 500;
+
+				> .name {
+					font-weight: 700;
+					font-size: 15px;
+				}
+				> .moreBtn {
+					user-select: none;
+					position: absolute;
+					left: 0px;
+					top: 0;
+					display: flex;
+					align-items: center;
+					gap: 4px;
+					padding: 7px;
+					font-weight: 400;
+					color: var(--btn-active);
+
+					&:not(:disabled):active {
+						color: var(--btn-active-hover);
+					}
+				}
+			}
+		}
+	}
+	> .form {
+		display: flex;
+		flex-direction: column;
+		padding: 0px 10px;
+		gap: 10px;
+
+		> .chart {
+			overflow: hidden;
+			border-radius: 10px;
+			background-color: var(--box-background);
+			box-shadow: 0px 0px 5px 1px var(--box-shadow);
+
+			> .info {
+				padding: 10px 12px;
+			}
+			> .line {
+				background-color: var(--box-line);
+				height: 7px;
+			}
+		}
+		> .box {
+			padding: 10px 12px;
+			border-radius: 10px;
+			background-color: var(--box-background);
+			box-shadow: 0px 0px 5px 1px var(--box-shadow);
+		}
+	}
+
+	> .moreBg {
+		z-index: 1;
+		position: absolute;
+		inset: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	> .more {
+		z-index: 2;
+		position: absolute;
+		bottom: 0px;
+		padding: 10px;
+		width: 100%;
+
+		> .form {
+			display: flex;
+			flex-direction: column;
+			padding: 10px 15px;
+			gap: 10px;
+			border-radius: 10px;
+			background-color: var(--box-background);
+
+			> .top {
+				user-select: none;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				> h1 {
+					font-size: 16px;
+					font-weight: 600;
+				}
+			}
+			> .bottom {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				> .date {
+					display: flex;
+					justify-content: space-between;
+					color: var(--placeholder);
+
+					> span {
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.fadeIn {
+	animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.fadeOut {
+	animation: fadeOut 0.2s ease forwards;
+}

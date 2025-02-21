@@ -1,0 +1,120 @@
+.rSelect {
+	> div {
+		border-radius: 10px !important;
+		box-shadow: 0px 0px 5px 1px var(--box-shadow);
+	}
+	> span {
+		border-radius: 10px !important;
+	}
+}
+
+.rSpan {
+	padding: 0px 9px;
+	overflow: hidden;
+	flex: 0, 1;
+	min-width: 90px;
+	font-size: 15px;
+	text-align: center;
+	text-wrap: nowrap;
+	text-overflow: ellipsis;
+	border: 2px solid var(--btn-border);
+	border-radius: 4px;
+	background-color: var(--btn-blue-color);
+	font-weight: 500;
+	color: white;
+	text-shadow:
+		-0.6px 0 black,
+		0 0.6px black,
+		0.6px 0 black,
+		0 -0.6px black;
+	border-color: #ffffff36;
+
+	&.green {
+		background-color: var(--btn-green-color);
+	}
+	&.red {
+		background-color: var(--btn-red-color);
+	}
+}
+
+.not_select {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--placeholder);
+	padding: 10px 12px;
+	height: 100%;
+}
+
+.manage {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	height: calc(100% - 52px - 52px);
+
+	> .info {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid var(--btn-border);
+		border-radius: 10px;
+		background-color: var(--box-background);
+		box-shadow: 0px 0px 5px 1px var(--box-shadow);
+		transition: 0.1s;
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+
+		> .body {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+			padding: 7px 9px;
+			font-weight: 500;
+			font-size: 15px;
+
+			> p {
+				flex: 1;
+				overflow: hidden;
+				text-wrap: nowrap;
+				text-overflow: ellipsis;
+			}
+			> span {
+				flex: 0, 1;
+				overflow: hidden;
+				text-wrap: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+
+		> .micro {
+			display: flex;
+			overflow: hidden;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+			padding: 1px 9px;
+			border-top: 1px solid var(--placeholder);
+			color: var(--placeholder);
+
+			> p {
+				flex: 1;
+				overflow: hidden;
+				text-wrap: nowrap;
+				text-overflow: ellipsis;
+				font-size: 13px;
+			}
+			> span {
+				flex: 0, 1;
+				overflow: hidden;
+				text-wrap: nowrap;
+				text-overflow: ellipsis;
+				font-size: 13px;
+			}
+		}
+	}
+}

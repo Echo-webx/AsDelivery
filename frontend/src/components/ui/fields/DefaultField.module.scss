@@ -1,0 +1,46 @@
+.label {
+	user-select: none;
+	margin-left: 4px;
+	font-size: 14px;
+	font-weight: 500;
+
+	&.error {
+		color: var(--box-red-color);
+	}
+}
+.input {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	width: 100%;
+	padding: 7px 9px;
+	background-color: var(--box-blue-input);
+	border: 2px solid var(--box-blue-border);
+	border-radius: 7px;
+	font-size: 16px;
+	font-weight: 400;
+	outline: none;
+	transition: 0.1s;
+
+	&:not(:disabled):focus {
+		background-color: var(--box-purple-input);
+		border-color: var(--box-purple-border);
+	}
+
+	&::-webkit-calendar-picker-indicator {
+		position: absolute;
+		right: 9px;
+	}
+
+	&.error {
+		background-color: var(--box-red-input);
+		border-color: var(--box-red-border);
+		&:not(:focus)::placeholder {
+			color: var(--box-red-placeholder);
+		}
+	}
+
+	&.labeling {
+		margin-top: 2px;
+	}
+}

@@ -1,0 +1,59 @@
+enum EnumProductReceptionStatus {
+    confirm
+    edit
+}
+
+enum EnumProductReceptionMarking {
+    accounting
+    deleted
+    null
+}
+
+// ----------Product release
+
+model ProductReception {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    createdAt DateTime @default(now()) @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at")
+
+    user          User?   @relation(fields: [userId], references: [id])
+    userId        String? @map("user_id") @db.ObjectId
+    archiveUserId String  @map("archive_user_id")
+
+    tag     String                      @unique
+    status  EnumProductReceptionStatus
+    marking EnumProductReceptionMarking @default(null)
+
+    vendor        String
+    totalAmount   Float  @map("total_amount")
+    totalQuantity Float  @map("total_quantity")
+    userFIO       String @map("user_fio")
+
+    position ProductReceptionPosition[]
+
+    @@map("product_reception")
+}
+
+model ProductReceptionPosition {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    createdAt DateTime @default(now()) @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at")
+
+    productReception   ProductReception? @relation(fields: [productReceptionId], references: [id], onDelete: Cascade)
+    productReceptionId String?           @map("product_reception_id") @db.ObjectId
+
+    product          Product? @relation(fields: [productId], references: [id])
+    productId        String?  @map("product_id") @db.ObjectId
+    archiveProductId String?  @map("archive_product_id")
+
+    unit          EnumProductUnit @default(piece)
+    name          String
+    purchasePrice Float           @map("purchase_price")
+
+    amount        Int
+    quantity      Int
+    quantityEdit  Int? @map("quantity_edit")
+    quantityError Int? @map("quantity_error")
+
+    @@map("product_reception_position")
+}
